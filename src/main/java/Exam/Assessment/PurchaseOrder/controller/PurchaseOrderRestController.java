@@ -38,11 +38,7 @@ public class PurchaseOrderRestController {
             Float total = (float) 0;
             for (int i=0; i<items.size(); i++) {
                 total += quotation.getQuotation(items.get(i)) * quantity.get(i);
-                // System.out.println(">>> fruit " + items.get(i));
-                // System.out.println(">>> quantity " + quantity.get(i));
-                // System.out.println(">>> total " + total);
             }
-            // System.out.println(">>>>>>>>> total" + total);
 
             JsonObject jsonObjToReturn = Json.createObjectBuilder()
                                                 .add("invoiceId", quotation.getQuoteId())
