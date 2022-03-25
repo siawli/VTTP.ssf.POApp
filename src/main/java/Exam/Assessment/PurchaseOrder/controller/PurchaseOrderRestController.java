@@ -50,7 +50,7 @@ public class PurchaseOrderRestController {
         } else {
             JsonObjectBuilder bodyB = Json.createObjectBuilder();
             JsonObject bodyObj = bodyB.build();
-            return ResponseEntity.status(HttpStatus.NOT_ACCEPTABLE).body(bodyObj.toString());
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body(bodyObj.toString());
         }
     }
 }
